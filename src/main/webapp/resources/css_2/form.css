@@ -1,0 +1,199 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.content {
+	position: relative;
+}
+
+.form-container {
+	margin: 20px;
+	padding: 20px;
+	background-color: #f3f6f9;
+	border-radius: 8px;
+}
+
+.form-header {
+	margin-bottom: 20px;
+}
+
+.form {
+	display: grid;
+	grid-template-rows: repeat(6, 1fr);
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-areas: 
+	"first last"
+	"phone birth"
+	"gender email"
+	"address image"
+	"note note"
+	"submit submit";
+}
+
+.form-employee {
+	display: grid;
+	grid-template-rows: repeat(6, 1fr);
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-areas: 
+	"first last"
+	"gender birth"
+	"phone email"
+	"position positionDate"
+	"image address"
+	"submit submit";
+}
+
+.form-check {
+	padding: 10px;
+	grid-template-rows: repeat(3, 1fr);
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-areas: 
+	"code package"
+	"date employee"
+	"submit .";
+}
+
+.form-package {
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-areas:
+	"package date"
+	"submit .";
+}
+
+.form-class{
+	padding: 10px;
+	grid-template-rows: repeat(1, 1fr);
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-areas: 
+	"classname editbtn";
+}
+
+.form-class-edit {
+	grid-template-rows: repeat(2, 1fr);
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-areas:
+	"id classname" 
+	"editbtn .";
+}
+
+.form-class-package{
+	padding: 10px;
+	grid-template-rows: repeat(3, 1fr);
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-areas: 
+	"packagename price"
+	"numberofdays duration" 
+	"numberofstudents ."
+	"submit .";
+}
+
+.form-statistic {
+	grid-template-rows: repeat(1, 1fr);
+	grid-template-columns: repeat(3, 1fr);	
+}
+
+.form-group {
+	width: 100%;
+	padding: 15px 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: flex-start;
+}
+
+.form-group > input, select {
+	width: 100%;
+	height: 40px;
+	padding: 5px 10px;
+	border: 1px solid #dee2e6;
+	border-radius: 4px;
+	outline: none;
+}
+
+.form-group > input:focus {
+	border: 1px solid var(--bs-blue);
+}
+
+input[type="submit"]{
+	margin: 20px 10px;
+	width: 100px;
+	height: 40px;
+	color: #fff;
+	background-color: var(--bs-blue);
+	border: none;
+	border-radius: 4px;
+	outline: none;
+}
+
+.overlay {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	display: flex;
+	background-color: #000;
+	opacity: 0.3;
+	z-index: 9998;
+}
+
+.success-message {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #fff;
+	border-radius: 8px;
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 9999;
+}
+
+.message-btn {
+	width: 70%;
+	margin: 10px 0;
+	padding: 10px 0;
+	color: #fff;
+	font-size: 20px;
+	font-weight: 600;
+	background-color: var(--bs-blue);
+	border: none;
+	border-radius: 50px;
+	text-align: center;
+}
+
+.error-message{
+	margin-top: 5px;
+	color: var(--bs-red);
+	font-style: italic;
+	font-size: 14px;
+}
+
+.hide {
+	display: none;
+}
+
+.cancel{
+	width: 100px;
+    height: 40px;
+    color: var(--bs-blue);
+    border-radius: 4px;
+    border: 2px solid var(--bs-blue);
+}
+
+.modal-form {
+	padding: 20px;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #fff;
+	z-index: 9999;
+	border-radius: 4px;
+}

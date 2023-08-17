@@ -1,0 +1,117 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.table-container {
+	margin: 20px;
+	padding: 20px;
+	background-color: #f3f6f9;
+	border-radius: 8px;
+}
+
+.table-header {
+	margin-bottom: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.search-bar {
+	display: flex;
+	align-items: center;
+}
+
+.search-bar > input {
+	margin: 0 15px;
+	padding: 0 10px;
+	width: 300px;
+	height: 40px;
+	border: 1px solid #dee2e6;
+	outline: none;
+	border-radius: 32px;
+}
+
+.search-bar > input:focus {
+	border: 1px solid var(--bs-blue);
+}
+
+.search-bar > a {
+	color: #191c24;
+}
+
+.search-bar > a:hover {
+	color: var(--bs-blue);
+}
+
+.table {
+	max-height: 1000px;
+	overflow-y: scroll;
+}
+
+th {
+	text-align: center;
+}
+
+.status {
+	position: relative;
+	width: 40px;
+	height: 20px;
+	border-radius: 32px;
+	background-color: #fff;
+	border: #757575;
+}
+
+.dot {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	border-radius: 32px;
+	background-color: var(--bs-red);
+	transition: all 0.2s ease-in-out;
+}
+
+.active-dot {
+	top: 0;
+	left: calc(100% - 20px);
+	background-color: var(--bs-green);
+}
+
+.btns-container {
+	margin-bottom: 20px;
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.insert-btn {
+	width: 100px;
+	height: 40px;
+	padding: 10px;
+	text-align: center;
+	color: #fff;
+	background-color: var(--bs-blue);
+	border: none;
+	outline: none;
+	border-radius: 4px;
+}
+
+.insert-btn:hover {
+	color: #fff;
+}
+
+.code {
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100px;
+    cursor: pointer;
+}
+
+.save-class-btn:hover {
+	color: #fff;
+}
